@@ -1,0 +1,34 @@
+public class EmployeeManagementSystem {
+  // Employee management
+  public void addEmployee(String name, int id, String department) {
+    // Logic to add employee
+    System.out.println("Added employee: " + name + " to " + department);
+  }
+
+  public void removeEmployee(int id) {
+    // Logic to remove employee
+    System.out.println("Removed employee with ID: " + id);
+  }
+
+  public void updateEmployee(int id, String newName) {
+    // Logic to update employee details
+    System.out.println("Updated employee ID: " + id + " with name: " + newName);
+  }
+
+  // Payroll management
+  public void processPayroll(int employeeId, double salary) {
+    // Logic to process payroll
+    System.out.println("Processed payroll for employee ID: " + employeeId + " with salary: " + salary);
+  }
+
+  public void generatePayrollReport() {
+    // Logic to generate payroll report
+    System.out.println("Generated payroll report.");
+  }
+
+  public void shutdownSystem() {
+    // Logic to shut down system
+    System.out.println("System shutting down.");
+  }
+
+}
