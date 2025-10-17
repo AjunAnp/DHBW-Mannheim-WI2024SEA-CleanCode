@@ -1,6 +1,6 @@
 package solid.ocp.exercise;
 
-public class Circle {
+public class Circle implements Shape{
     private double radius;
 
     public Circle(double radius) {
@@ -9,5 +9,9 @@ public class Circle {
 
     public double getRadius() {
         return radius;
+    }
+
+    public double calculateArea() {
+        return Math.PI * radius * radius;
     }
 }

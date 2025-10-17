@@ -1,165 +1,156 @@
 package solid.srp.exercise;
 
 public class ManagementSystem {
-	
-	// Employee management
-    public void addEmployee(String name, int id, String department) {
-        // Logic to add employee
-        System.out.println("Added employee: " + name + " to " + department);
-    }
 
-    public void removeEmployee(int id) {
-        // Logic to remove employee
-        System.out.println("Removed employee with ID: " + id);
-    }
+  CustomerManagementSystem customerManagementSystem = new CustomerManagementSystem();
+  DatabaseManagementSystem databaseManagementSystem = new DatabaseManagementSystem();
+  EmployeeManagementSystem employeeManagementSystem = new EmployeeManagementSystem();
+  EmailSystem emailSystem = new EmailSystem();
+  FileManagementSystem fileManagementSystem = new FileManagementSystem();
+  InventoryManagementSystem inventoryManagementSystem = new InventoryManagementSystem();
+  LogSystem logSystem = new LogSystem();
+  NotificationSystem notificationSystem = new NotificationSystem();
+  PrintManagementSystem printManagementSystem = new PrintManagementSystem();
+  ProjectManagementSystem projectManagementSystem = new ProjectManagementSystem();
+  ReportGenerator reportGenerator = new ReportGenerator();
+  SalesManagementSystem salesManagementSystem = new SalesManagementSystem();
 
-    public void updateEmployee(int id, String newName) {
-        // Logic to update employee details
-        System.out.println("Updated employee ID: " + id + " with name: " + newName);
-    }
 
-    // Payroll management
-    public void processPayroll(int employeeId, double salary) {
-        // Logic to process payroll
-        System.out.println("Processed payroll for employee ID: " + employeeId + " with salary: " + salary);
-    }
+  // Employees
+  public void addEmployee(String name, int id, String department) {
+    employeeManagementSystem.addEmployee(name, id, department);
+  }
 
-    public void generatePayrollReport() {
-        // Logic to generate payroll report
-        System.out.println("Generated payroll report.");
-    }
+  public void updateEmployee(int id, String newName) {
+    employeeManagementSystem.updateEmployee(id, newName);
+  }
 
-    // Project management
-    public void assignProject(int employeeId, String project) {
-        // Logic to assign project
-        System.out.println("Assigned project: " + project + " to employee ID: " + employeeId);
-    }
+  public void removeEmployee(int id) {
+    employeeManagementSystem.removeEmployee(id);
+  }
 
-    public void completeProject(int employeeId, String project) {
-        // Logic to complete project
-        System.out.println("Completed project: " + project + " for employee ID: " + employeeId);
-    }
+  public void processPayroll(int employeeId, double salary) {
+    employeeManagementSystem.processPayroll(employeeId, salary);
+  }
 
-    public void generateProjectStatusReport(String project) {
-        // Logic to generate project status report
-        System.out.println("Generated status report for project: " + project);
-    }
+  public void generatePayrollReport() {
+    employeeManagementSystem.generatePayrollReport();
+  }
 
-    // Customer management
-    public void addCustomer(String name, String email) {
-        // Logic to add a customer
-        System.out.println("Added customer: " + name + " with email: " + email);
-    }
 
-    public void removeCustomer(int customerId) {
-        // Logic to remove customer
-        System.out.println("Removed customer with ID: " + customerId);
-    }
+  // Projects
+  public void assignProject(int employeeId, String project) {
+    projectManagementSystem.assignProject(employeeId, project);
+  }
 
-    public void updateCustomer(int customerId, String newEmail) {
-        // Logic to update customer details
-        System.out.println("Updated customer ID: " + customerId + " with new email: " + newEmail);
-    }
+  public void completeProject(int employeeId, String project) {
+    projectManagementSystem.completeProject(employeeId, project);
+  }
 
-    public void sendPromotionalEmail(int customerId, String promotion) {
-        // Logic to send promotional email
-        System.out.println("Sent promotional email: " + promotion + " to customer ID: " + customerId);
-    }
+  public void generateProjectStatusReport(String project) {
+    projectManagementSystem.generateProjectStatusReport(project);
+  }
 
-    // Sales management
-    public void recordSale(int customerId, double amount) {
-        // Logic to record a sale
-        System.out.println("Recorded sale of $" + amount + " for customer ID: " + customerId);
-    }
 
-    public void generateSalesReport() {
-        // Logic to generate sales report
-        System.out.println("Generated sales report.");
-    }
+  // Customer
+  public void addCustomer(String name, String email) {
+    customerManagementSystem.addCustomer(name, email);
+  }
 
-    // Inventory management
-    public void addInventoryItem(String item, int quantity) {
-        // Logic to add item to inventory
-        System.out.println("Added " + quantity + " units of " + item + " to inventory.");
-    }
+  public void updateCustomer(int customerId, String newEmail) {
+    customerManagementSystem.updateCustomer(customerId, newEmail);
+  }
 
-    public void removeInventoryItem(String item) {
-        // Logic to remove item from inventory
-        System.out.println("Removed " + item + " from inventory.");
-    }
+  public void removeCustomer(int customerId) {
+    customerManagementSystem.removeCustomer(customerId);
+  }
 
-    public void updateInventoryItemQuantity(String item, int quantity) {
-        // Logic to update inventory
-        System.out.println("Updated inventory of " + item + " to " + quantity + " units.");
-    }
+  public void sendPromotionalEmail(int customerId, String promotion) {
+    customerManagementSystem.sendPromotionalEmail(customerId, promotion);
+  }
 
-    public void generateInventoryReport() {
-        // Logic to generate inventory report
-        System.out.println("Generated inventory report.");
-    }
 
-    // Report generation (for all departments)
-    public void generateCompanyWideReport() {
-        // Logic to generate a massive company-wide report
-        System.out.println("Generated company-wide report.");
-    }
+  // Sales
+  public void recordSale(int customerId, double amount) {
+    salesManagementSystem.recordSale(customerId, amount);
+  }
 
-    // Database operations
-    public void connectToDatabase() {
-        // Logic to connect to database
-        System.out.println("Connected to database.");
-    }
+  public void generateSalesReport() {
+    salesManagementSystem.generateSalesReport();
+  }
 
-    public void disconnectFromDatabase() {
-        // Logic to disconnect from database
-        System.out.println("Disconnected from database.");
-    }
 
-    public void saveDataToDatabase(String data) {
-        // Logic to save data to the database
-        System.out.println("Saved data to the database: " + data);
-    }
+  // Inventory
+  public void addInventoryItem(String item, int quantity) {
+    inventoryManagementSystem.addInventoryItem(item, quantity);
+  }
 
-    public void loadDataFromDatabase() {
-        // Logic to load data from the database
-        System.out.println("Loaded data from the database.");
-    }
+  public void updateInventoryItemQuantity(String item, int quantity) {
+    inventoryManagementSystem.updateInventoryItemQuantity(item, quantity);
+  }
 
-    // File handling
-    public void saveReportToFile(String report, String filePath) {
-        // Logic to save a report to a file
-        System.out.println("Saved report to file: " + filePath);
-    }
+  public void removeInventoryItem(String item) {
+    inventoryManagementSystem.removeInventoryItem(item);
+  }
 
-    public void loadReportFromFile(String filePath) {
-        // Logic to load a report from a file
-        System.out.println("Loaded report from file: " + filePath);
-    }
+  public void generateInventoryReport() {
+    inventoryManagementSystem.generateInventoryReport();
+  }
 
-    // Utility methods (really starting to bloat the class)
-    public void sendEmail(String emailAddress, String subject, String message) {
-        // Logic to send email
-        System.out.println("Sent email to " + emailAddress + " with subject: " + subject);
-    }
 
-    public void logEvent(String event) {
-        // Logic to log an event
-        System.out.println("Logged event: " + event);
-    }
+  // Reports
+  public void generateCompanyWideReport() {
+    reportGenerator.generateCompanyWideReport();
+  }
 
-    public void sendSystemNotification(String notification) {
-        // Logic to send system notification
-        System.out.println("Sent system notification: " + notification);
-    }
 
-    public void printDocument(String document) {
-        // Logic to print a document
-        System.out.println("Printed document: " + document);
-    }
+  // Database
+  public void connectToDatabase() {
+    databaseManagementSystem.connectToDatabase();
+  }
 
-    public void shutdownSystem() {
-        // Logic to shut down system
-        System.out.println("System shutting down.");
-    }
+  public void disconnectFromDatabase() {
+    databaseManagementSystem.disconnectFromDatabase();
+  }
+
+  public void saveDataToDatabase(String data) {
+    databaseManagementSystem.saveDataToDatabase(data);
+  }
+
+  public void loadDataFromDatabase() {
+    databaseManagementSystem.loadDataFromDatabase();
+  }
+
+
+  // Files
+  public void saveReportToFile(String report, String filePath) {
+    fileManagementSystem.saveReportToFile(report, filePath);
+  }
+
+  public void loadReportFromFile(String filePath) {
+    fileManagementSystem.loadReportFromFile(filePath);
+  }
+
+  public void sendEmail(String emailAddress, String subject, String message) {
+    emailSystem.sendEmail(emailAddress, subject, message);
+  }
+
+  public void sendSystemNotification(String notification) {
+    notificationSystem.sendSystemNotification(notification);
+  }
+
+  public void logEvent(String event) {
+    logSystem.logEvent(event);
+  }
+
+  public void printDocument(String document) {
+    printManagementSystem.printDocument(document);
+  }
+
+
+  // System
+  public void shutdownSystem() {
+    System.out.println("System shutting down...");
+  }
 
 }

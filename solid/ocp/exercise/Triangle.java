@@ -1,6 +1,6 @@
 package solid.ocp.exercise;
 
-public class Triangle {
+public class Triangle implements Shape{
     private double base;
     private double height;
 
@@ -15,5 +15,9 @@ public class Triangle {
 
     public double getHeight() {
         return height;
+    }
+
+    public double calculateArea() {
+        return base * height * 0.5;
     }
 }
