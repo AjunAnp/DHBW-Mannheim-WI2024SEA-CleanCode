@@ -1,10 +1,12 @@
 package solid.dip.exercise;
 
 public class Main {
+    public static void main(String[] args) {
+        Legs legs = new BasicLegs();
+        Hands hands = new BasicHands();
+        PowerSource ps = new BasicPowerSource();
 
-	public static void main(String[] args) {
-		Robot r = new Robot(new BasicLegs(), new BasicHands(), new BasicPowerSource());
-		r.goToChargingStation();
-	}
-
+        Robot r = new Robot(legs, hands, ps);
+        r.goToChargingStation();
+    }
 }
