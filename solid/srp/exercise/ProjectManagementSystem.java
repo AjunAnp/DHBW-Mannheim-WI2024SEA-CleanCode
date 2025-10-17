@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class ProjectManagementSystem {
   // Project management
   public void assignProject(int employeeId, String project) {

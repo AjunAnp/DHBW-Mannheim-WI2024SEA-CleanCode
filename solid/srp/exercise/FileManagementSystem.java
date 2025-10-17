@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class FileManagementSystem {
   // File handling
   public void saveReportToFile(String report, String filePath) {

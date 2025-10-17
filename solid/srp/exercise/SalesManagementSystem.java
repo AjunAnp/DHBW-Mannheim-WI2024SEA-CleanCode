@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class SalesManagementSystem {
   // Sales management
   public void recordSale(int customerId, double amount) {

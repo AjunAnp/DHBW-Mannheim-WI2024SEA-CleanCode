@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class EmployeeManagementSystem {
   // Employee management
   public void addEmployee(String name, int id, String department) {

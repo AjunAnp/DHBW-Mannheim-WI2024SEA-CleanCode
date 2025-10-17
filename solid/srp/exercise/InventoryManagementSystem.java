@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class InventoryManagementSystem {
   // Inventory management
   public void addInventoryItem(String item, int quantity) {

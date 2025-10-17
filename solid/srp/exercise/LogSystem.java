@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class LogSystem {
   public void logEvent(String event) {
     // Logic to log an event

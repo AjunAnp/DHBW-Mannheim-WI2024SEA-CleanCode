@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class ManagementSystem {
 
   CustomerManagementSystem customerManagementSystem = new CustomerManagementSystem();

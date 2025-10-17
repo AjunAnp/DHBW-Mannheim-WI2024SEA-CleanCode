@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class ReportGenerator {
   // Report generation (for all departments)
   public void generateCompanyWideReport() {

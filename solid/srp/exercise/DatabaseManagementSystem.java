@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class DatabaseManagementSystem {
   // Database operations
   public void connectToDatabase() {

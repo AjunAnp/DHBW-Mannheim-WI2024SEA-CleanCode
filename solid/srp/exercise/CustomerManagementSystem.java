@@ -1,3 +1,5 @@
+package solid.srp.exercise;
+
 public class CustomerManagementSystem {
   // Customer management
   public void addCustomer(String name, String email) {

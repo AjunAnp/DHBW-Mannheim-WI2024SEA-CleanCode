@@ -1,3 +1,4 @@
+package solid.srp.exercise;
 
 public class PrintManagementSystem {
   public void printDocument(String document) {
